@@ -4,7 +4,8 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "Cook Classes/Structs with the taste you love."
   s.description  = <<-DESC
-    Cook Classes/Structs with the taste you love!
+    Cook classes/structs with the taste you love. Naming your extensions in the Swifty way people love.
+    The library helps you name your extension in the way as `label.rx.text` other than 'label.rx_text'.
                    DESC
   s.homepage     = "https://github.com/ShaneQi/Cooking"
   s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
