@@ -13,23 +13,17 @@ public protocol Edible {
 }
 
 public extension Edible {
-	var cook: Food<Self> {
-		return Food(self)
+	var cook: Cooking<Self> {
+		return Cooking(self)
 	}
-	static var cook: Food<Self>.Type {
-		return Food.self
+	static var cook: Cooking<Self>.Type {
+		return Cooking.self
 	}
 }
 
-public protocol Cooking {
-	associatedtype Ingredient
-	var ingredient: Ingredient { get }
-	init(_ ingredient: Ingredient)
-}
-
-public struct Food<Base>: Cooking {
-	public let ingredient: Base
-	public init(_ ingredient: Base) {
+public struct Cooking<Ingredient> {
+	public let ingredient: Ingredient
+	public init(_ ingredient: Ingredient) {
 		self.ingredient = ingredient
 	}
 }
