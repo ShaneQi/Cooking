@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Cooking"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "Cook Classes/Structs with the taste you love."
   s.description  = <<-DESC
     Cook classes/structs with the taste you love. Naming your extensions in the Swifty way people love.

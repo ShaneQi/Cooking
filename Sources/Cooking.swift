@@ -22,7 +22,7 @@ public extension Edible {
 }
 
 public struct Cooking<Ingredient> {
-	public let ingredient: Ingredient
+	public var ingredient: Ingredient
 	public init(_ ingredient: Ingredient) {
 		self.ingredient = ingredient
 	}
