@@ -89,6 +89,38 @@ Add this project as a dependency in your Package.swift file.
 
 Include file `Sources/Cooking.swift` in your project.
 
+## Limitation
+
+1. Can't extension structs with `mutating func`.
+
+```swift
+extension String: Edible {}
+
+extension Cooking where Ingredient == String {
+
+	mutating func addExclamation() {
+		ingredient.append("!")
+	}
+
+}
+
+"hello".cook.addExclamation()
+// ERROR: ^ Cannot use mutating member, `cook` is a get-only property.
+```
+
+2. Can't extension generics types.
+
+```swift
+extension Optional: Edible {}  
+                               
+extension Cooking where Ingredient == Optional {
+//                                ERROR: ^ Reference to generic type 'Optional' requires arguments in <...>                          
+
+	func someFunction() {}
+
+}
+```
+
 ## Licensing
 
 Apache-2.0
