@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Cooking"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "Cook Classes/Structs with the taste you love."
   s.description  = <<-DESC
     Cook classes/structs with the taste you love. Naming your extensions in the Swifty way people love.
@@ -17,5 +17,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/ShaneQi/Cooking.git", :tag => "#{s.version}" }
   s.source_files  = "Sources"
+  s.swift_version = ["4.0", "4.2", "5.0"]
 
 end
